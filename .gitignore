@@ -1,0 +1,58 @@
+# =====================
+# Project-specific ignores
+# =====================
+
+# Kaggle API credentials
+kaggle.json
+.kaggle/
+~/.kaggle/
+
+# =====================
+# Data files
+# =====================
+
+# Large competition data files
+*.fasta
+*.obo
+*.tsv
+
+# =====================
+# Python / Notebook cache
+# =====================
+
+__pycache__/
+.ipynb_checkpoints/
+*.pyc
+*.pyo
+*.pyd
+
+# =====================
+# Virtual environments
+# =====================
+
+env/
+venv/
+.venv/
+ENV/
+
+# =====================
+# VSCode / Editor settings
+# =====================
+
+.vscode/
+.idea/
+
+# =====================
+# OS-generated files
+# =====================
+
+.DS_Store
+Thumbs.db
+
+# =====================
+# Logs / temporary files
+# =====================
+
+*.log
+*.tmp
+*.bak
