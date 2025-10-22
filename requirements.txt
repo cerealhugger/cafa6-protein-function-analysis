@@ -1,17 +1,6 @@
-# Core scientific packages
 pandas
 numpy
-tqdm
+biopython
 matplotlib
 seaborn
-plotly
-scikit-learn
-umap-learn
-
-# Bioinformatics
-biopython
-goatools
-
-# Deep learning (optional for embeddings)
-torch
-transformers
+tqdm
