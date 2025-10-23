@@ -38,4 +38,11 @@ Main work is performed in **`data_analysis.ipynb`**, using training and testing 
 | **`sample_submission.tsv`** | Used to verify correct output formatting before submitting predictions. |
 
 ---
+Quick Reference Summary
+Variable	Type	Description
+train_terms	DataFrame	Protein → GO term mapping
+train_taxonomy	DataFrame	Protein → Taxonomy mapping
+IA	DataFrame	GO term → Information Accretion
+aa_df	DataFrame	Protein → Amino acid frequency profile
+extract_uniprot_id()	Function	Parses UniProt ID from FASTA record string
 
