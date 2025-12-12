@@ -1,8 +1,6 @@
 # 🧬 CAFA-6 Protein Function Prediction — Data Analysis
 
-This repository supports exploratory data analysis and model development for the **CAFA-6 Protein Function Prediction** competition on Kaggle.
-
-Main work is performed in **`data_analysis.ipynb`**, using training and testing data from the competition dataset.
+This repository supports exploratory data analysis and model development for the **CAFA-6 Protein Function Prediction** competition on Kaggle. Here is the link for the dataset: https://www.kaggle.com/competitions/cafa-6-protein-function-prediction/data
 
 ---
 
