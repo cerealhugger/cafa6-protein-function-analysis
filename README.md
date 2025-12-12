@@ -11,7 +11,7 @@ Main work is performed in **`data_analysis.ipynb`**, using training and testing 
 
 ---
 
-## 📚 Dataset Description
+## Dataset Description
 
 | File / Folder | Description |
 |----------------|-------------|
@@ -26,7 +26,7 @@ Main work is performed in **`data_analysis.ipynb`**, using training and testing 
 
 ---
 
-## ⚙️ Usage in Analysis
+## Usage in Analysis
 
 | Component | Typical Use in `data_analysis.ipynb` |
 |------------|--------------------------------------|
@@ -46,3 +46,16 @@ IA	DataFrame	GO term → Information Accretion
 aa_df	DataFrame	Protein → Amino acid frequency profile
 extract_uniprot_id()	Function	Parses UniProt ID from FASTA record string
 
+## Notebooks
+| File | Description |
+|----------------|-------------|
+| **`sequence.ipynb`** | Baseline Model with ESM2 8M Embeddings + MLP |
+| **`CV.ipynb`** | Cross Validation Experiment on ESM2 650M and ProtBERT Embeddings with Linear Regression and MLP Model Only|
+| **`hybridnet.ipynb`** | All embeddings trained on HybridNet |
+| **`data_analysis.ipynb`** | exploration of dataset|
+| **`embeddings.ipynb`** | embeddings genearation|
+| **`cafa6_train_cnn.ipynb`** | experiment of esm2 8m embeddings with CNN |
+
+
+
+---
