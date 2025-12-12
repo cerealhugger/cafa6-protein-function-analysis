@@ -23,6 +23,16 @@ This repository supports exploratory data analysis and model development for the
 | **`sample_submission.tsv`** | Template file showing the **correct submission format** required for Kaggle. It lists protein IDs and example predicted GO terms. |
 
 ---
+## Notebooks
+| File | Description | Requirement | Execution Time | 
+|----------------|-------------|-------------|-------------|
+| **`sequence.ipynb`** | Baseline Model with ESM2 8M Embeddings + MLP | train_esm2_embeddings.parquet and test_esm2_embeddings.parquet| / | 
+| **`CV.ipynb`** | Cross Validation Experiment on ESM2 650M and ProtBERT Embeddings with Linear Regression and MLP Model Only| esm2 650 embeddings and probert embeddings| 5hrs with full batch |
+| **`hybridnet.ipynb`** | All embeddings trained on HybridNet |all emebddings file| 2 hours | 
+| **`data_analysis.ipynb`** | exploration of dataset| cafa dataset | / |
+| **`embeddings.ipynb`** | embeddings genearation| sequence fasta file |  2 - 12 hours|
+| **`cafa6_train_cnn.ipynb`** | experiment of esm2 8m embeddings with CNN | train_esm2_embeddings.parquet | / | 
+| **`demo.ipynb`** | demonstration on the subset of the data | train_demo.parquet and test_demo.parquet| / | 
 
 ## data_analysis.ipynb: Usage in Analysis
 
@@ -43,17 +53,6 @@ train_taxonomy	DataFrame	Protein → Taxonomy mapping
 IA	DataFrame	GO term → Information Accretion
 aa_df	DataFrame	Protein → Amino acid frequency profile
 extract_uniprot_id()	Function	Parses UniProt ID from FASTA record string
-
-## Notebooks
-| File | Description |
-|----------------|-------------|
-| **`sequence.ipynb`** | Baseline Model with ESM2 8M Embeddings + MLP |
-| **`CV.ipynb`** | Cross Validation Experiment on ESM2 650M and ProtBERT Embeddings with Linear Regression and MLP Model Only|
-| **`hybridnet.ipynb`** | All embeddings trained on HybridNet |
-| **`data_analysis.ipynb`** | exploration of dataset|
-| **`embeddings.ipynb`** | embeddings genearation|
-| **`cafa6_train_cnn.ipynb`** | experiment of esm2 8m embeddings with CNN |
-| **`demo.ipynb`** | demonstration on the subset of the data |
 
 ## How to Run `demo.ipynb`
 
@@ -90,3 +89,21 @@ Open demo.ipynb and run all cells from top to bottom. The notebook will automati
 - No additional configuration is required.
 
 ---
+
+## embeddings.ipynb: Embeddings Generation
+
+We use Google Colab for embeddings generation.
+
+---
+1. Run first cell to install all dependencies
+2. Upload sequence fasta file for embeddings generation
+3. Change model name for Protein Lanaguage Model you want to use. Or you can choose to download embeddings from google drive: https://drive.google.com/drive/folders/11msGNZCKy4jFYsQDGpdO90rqMudv23zB?usp=sharing
+   
+| Model Name | Execution time on test set |
+|----------------|-------------|
+| **`facebook/esm2_t6_8M_UR50D`** | 3 hours with GPU |
+| **`Rostlab/prot_bert`** | 6 hours with GPU |
+| **`facebook/esm2_t33_650M_UR50D`** | 8 hours with A100 |
+
+---
+
