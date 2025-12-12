@@ -53,7 +53,40 @@ extract_uniprot_id()	Function	Parses UniProt ID from FASTA record string
 | **`data_analysis.ipynb`** | exploration of dataset|
 | **`embeddings.ipynb`** | embeddings genearation|
 | **`cafa6_train_cnn.ipynb`** | experiment of esm2 8m embeddings with CNN |
+| **`demo.ipynb`** | demonstration on the subset of the data |
 
+## How to Run `demo.ipynb`
 
+This demo notebook runs a complete, lightweight version of our protein function prediction pipeline using precomputed ESM2-8M embeddings.
+
+---
+
+### 1. Ensure Required Files Are Present
+
+Before running the notebook, confirm that the following files are in the **root directory** of the repository:
+
+- `train_demo.parquet` — labeled demo training data  
+- `test_demo.parquet` — unlabeled demo test data  
+- `demo.ipynb`
+
+`train_demo.parquet` contains protein IDs, ESM2-8M embeddings (320 dimensions), and a list of GO terms per protein.  
+`test_demo.parquet` contains protein IDs and embeddings only.
+
+---
+
+### 2. Install Required Python Packages
+
+If the required packages are not already installed, run:
+
+```bash
+pip install pandas torch scikit-learn numpy tqdm
+```
+Open demo.ipynb and run all cells from top to bottom. The notebook will automatically:
+- Load the demo datasets
+- Split the data into training and validation sets
+- Train a 3-layer MLP classifier on ESM2-8M embeddings
+- Evaluate performance using micro-F1
+- Run inference on the demo test set
+- No additional configuration is required.
 
 ---
