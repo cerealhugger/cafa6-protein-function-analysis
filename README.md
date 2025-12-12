@@ -24,7 +24,7 @@ This repository supports exploratory data analysis and model development for the
 
 ---
 
-## Usage in Analysis
+## data_analysis.ipynb: Usage in Analysis
 
 | Component | Typical Use in `data_analysis.ipynb` |
 |------------|--------------------------------------|
